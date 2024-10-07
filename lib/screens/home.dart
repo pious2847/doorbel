@@ -23,9 +23,9 @@ class _HomeState extends State<Home> {
     try {
       final response = await googleApi.getRestaurants();
       print("Data gotten from data: $response ");
-      // setState(() {
-      //   resturantData = response;
-      // });
+      setState(() {
+        resturantData = response;
+      });
     } catch (e) {
         print('Failed to fetch devices: $e');
     }
