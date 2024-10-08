@@ -11,25 +11,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final googleApi = GoogleAPI();
-  List<dynamic> resturantData = [];
 
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  fetchResturants() async {
-    try {
-      final response = await googleApi.getRestaurants();
-      print("Data gotten from data: $response ");
-      setState(() {
-        resturantData = response;
-      });
-    } catch (e) {
-        print('Failed to fetch devices: $e');
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
