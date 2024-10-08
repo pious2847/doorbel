@@ -19,7 +19,14 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: const Text('Doorbel'),
       ),
-      body: Container(),
+      body: const Padding(
+        padding:  EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Text("Welcome,", style: TextStyle())
+          ]
+        ),
+      ),
     );
   }
 }
